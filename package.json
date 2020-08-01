@@ -1,0 +1,35 @@
+{
+    "name": "babel-typescript-eslint-prettier-parcel-starter",
+    "description": "A boilerplate for projects using babel, typescript, eslint, prettier and parcel as well as some nice presets.",
+    "author": "Christian Gitter",
+    "version": "1.0",
+    "license": "Unlicense",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git://ChrisGitter/babel-typescript-eslint-prettier-parcel-starter.git",
+        "web": "https://github.com/ChrisGitter/babel-typescript-eslint-prettier-parcel-starter"
+    },
+    "scripts": {
+        "type-check": "tsc --noEmit",
+        "type-check:watch": "yarn type-check -- --watch",
+        "build": "yarn build:types && yarn build:js",
+        "build:types": "tsc --emitDeclarationOnly",
+        "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
+        "lint": "eslint . --ext .js,.ts --quiet"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.10.5",
+        "@babel/core": "^7.11.0",
+        "@babel/plugin-proposal-class-properties": "^7.10.4",
+        "@babel/preset-env": "^7.11.0",
+        "@babel/preset-typescript": "^7.10.4",
+        "@typescript-eslint/eslint-plugin": "^3.7.1",
+        "@typescript-eslint/parser": "^3.7.1",
+        "eslint": "^7.6.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "prettier": "^2.0.5",
+        "typescript": "^3.9.7"
+    }
+}
